@@ -1,4 +1,5 @@
 from django.contrib import admin
+# my imports
 from .models import Settings 
 # Register your models here.
 

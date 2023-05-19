@@ -1,5 +1,5 @@
 from django.db import models
-
+from django_resized.forms import ResizedImageField
 # Create your models here.
 class Settings(models.Model):
     title = models.CharField(
@@ -9,9 +9,12 @@ class Settings(models.Model):
     descriptions = models.TextField(
         verbose_name="Сайт боюнча маалымат"
     )
-    logo = models.ImageField(
-        upload_to="logo/",
-        verbose_name="Сайттын логотиби"
+    logo = ResizedImageField(
+        force_format="WEBP", 
+        quality=100, 
+        upload_to='logo/',
+        verbose_name="Фотография для логотипа",
+        blank = True, null = True
     )
     phone = models.CharField(
         max_length=255,
