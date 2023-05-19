@@ -3,7 +3,7 @@
 {%block content%}
 
 <!-- Header Area Start -->
-{%include 'header.html'%}
+{%include 'include/header.html'%}
 <!-- End of Header Area -->
 
 <!-- Page Banner Area Start -->
@@ -32,12 +32,12 @@
             <div class="col-xl-9 col-lg-8 col-12 mb-20">
                 <!-- Single Course Details -->
                 <div class="single-course-details">
-                    <div class="image mb-4"><img alt="Image" src="{{pride.image_pride.url}}"></div>
+                    <div class="image mb-4"><img alt="Image" src="{{pride.image.url}}"></div>
                     <div class="content">
-                        <h4 class="title">{{pride.name_pride}}</h4>
+                        <h4 class="title">{{pride.name}}</h4>
                         
                         <div class="course-text-content">
-                            <p>{{pride.description_pride}}</p>
+                            <p>{{pride.descriptions}}</p>
                         </div>  
                     </div>  
                     
@@ -53,7 +53,7 @@
 </div>
 <!--End of Course Area-->
         
-{%include 'footer.html'%}
+{%include 'include/footer.html'%}
 <!-- End of Footer Bottom Area -->
 
 <!-- jquery -->		

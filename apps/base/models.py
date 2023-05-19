@@ -47,6 +47,7 @@ class Settings(models.Model):
     class Meta:
         verbose_name = "Мектеп боюнча маалымат"
         verbose_name_plural = "Мектеп боюнча маалыматтар"
+        ordering = ('id', )
 
 class About(models.Model):
     title = models.CharField(
@@ -70,3 +71,5 @@ class About(models.Model):
     class Meta:
         verbose_name = "Биз жонундо"
         verbose_name_plural = "Биз жонундо"
+        ordering = ('id', )
+        
