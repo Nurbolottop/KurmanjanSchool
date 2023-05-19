@@ -7,7 +7,7 @@ class Slide(models.Model):
         force_format="WEBP", 
         quality=100, 
         upload_to='slide/',
-        verbose_name="Фотография",
+        verbose_name="Сурот",
         blank = True, null = True
         )
     title = models.CharField(
@@ -81,11 +81,11 @@ class Certificate(models.Model):
         force_format="WEBP", 
         quality=100, 
         upload_to='slide/',
-        verbose_name="Фотография",
+        verbose_name="Сурот",
         blank = True, null = True
         )
 
     class Meta:
-        verbose_name = 'Сертификаттар'
-        verbose_name_plural = 'Сертификат'
+        verbose_name = 'Сертификат'
+        verbose_name_plural = ' Сертификаттар'
         ordering = ('id', )

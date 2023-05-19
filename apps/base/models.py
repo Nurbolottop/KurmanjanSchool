@@ -72,4 +72,16 @@ class About(models.Model):
         verbose_name = "Биз жонундо"
         verbose_name_plural = "Биз жонундо"
         ordering = ('id', )
-        
+
+class News(models.Model):
+    title = models.CharField(
+        max_length=255,
+        verbose_name="Название"
+    )
+    image = ResizedImageField(
+        force_format = "WEBP",
+        quality = "100",
+        upload_to = "about_image",
+        verbose_name="Сурот",
+        blank = True,null = True    
+    )
