@@ -8,8 +8,15 @@
                 <p>{{setting.descriptions}}</p>
                 
                 <div class="footer-social">
+                    {% if setting.facebook%}
                     <a target="_blank" rel="noopener" href="{{setting.facebook}}"><i class="fa fa-facebook"></i></a>
+                    {% endif %}
+                    {% if setting.instagram%}
                     <a target="_blank" rel="noopener" href="{{setting.instagram}}"><i class="fa fa-instagram"></i></a>
+                    {% endif %}
+                    {% if setting.youtube%}
+                    <a target="_blank" rel="noopener" href="{{setting.youtube}}"><i class="fa fa-youtube"></i></a>
+                    {% endif %}
 
                 </div>
             </div>
