@@ -1,4 +1,6 @@
 from django.shortcuts import render
+
+# my imports
 from apps.base.models import Settings
 from .models import Pride
 # Create your views here.

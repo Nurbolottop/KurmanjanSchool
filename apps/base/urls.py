@@ -1,4 +1,5 @@
 from django.urls import path
+
 # my imports
 from .views import index,about,contact,news,news_detail
 

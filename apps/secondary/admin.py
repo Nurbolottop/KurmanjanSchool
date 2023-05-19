@@ -1,4 +1,6 @@
 from django.contrib import admin
+
+# my imports
 from .models import Slide,Pride,Data,Certificate
 # Register your models here.
 class PrideFilterAdmin(admin.ModelAdmin):
