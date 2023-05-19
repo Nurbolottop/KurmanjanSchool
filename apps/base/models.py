@@ -85,3 +85,17 @@ class News(models.Model):
         verbose_name="Сурот",
         blank = True,null = True    
     )
+    descriptions = models.TextField(
+        verbose_name="Кошумча маалымат"
+    )
+    created_at = models.DateTimeField(
+        auto_now_add=True
+    )
+    
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Жанылык'
+        verbose_name_plural = 'Жанылыктар'
+        ordering = ('id', )
