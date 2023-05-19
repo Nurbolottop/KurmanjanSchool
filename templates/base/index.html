@@ -98,8 +98,8 @@
 </div>
 {% endif %}
 <!-- End of Funfact Area -->
-    
-<!-- Gallery Area Start -->
+
+{% if certificate%}
 <div class="gallery-area section bg-white pt-120 pb-0">
     <div class="container">
         <!-- Section Title -->
@@ -117,94 +117,7 @@
         </div>
     </div>
 </div>
-<!-- End of Gallery Area -->
-    
-<!-- Event Area Start -->
-{% comment %} <div class="event-area bg-white section pt-120 pb-120">
-    <div class="container">
-        <!-- Section Title -->
-        <div class="row">
-            <div class="section-title col-xs-12 mb-80">
-                <h3>OUR EVENTS</h3>
-                <p>There are many variations of passages</p>
-            </div>
-        </div>
-        <div class="row mb--30">
-            <!-- Event Item -->
-            <div class="col-lg-4 col-md-6 col-12 mb-30">
-                <div class="event-item">
-                    <img src="{% static 'img/event/1.jpg' %}" alt="Image">
-                    <span class="date">20 <span>Apr</span></span>
-                    <div class="content">
-                        <h3><a href="event-details.html">Learn English in ease</a></h3>
-                        <div class="event-meta fix">
-                            <span><i class="zmdi zmdi-time"></i> 4.00 pm - 8.00 pm</span>
-                            <span><i class="zmdi zmdi-pin"></i> Dhaka Bangladesh</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Event Item -->
-            <div class="col-lg-4 col-md-6 col-12 mb-30">
-                <div class="event-item">
-                    <img src="{% static 'img/event/2.jpg' %}" alt="Image">
-                    <span class="date">24 <span>Apr</span></span>
-                    <div class="content">
-                        <h3><a href="event-details.html">Learn English in ease</a></h3>
-                        <div class="event-meta fix">
-                            <span><i class="zmdi zmdi-time"></i> 4.00 pm - 8.00 pm</span>
-                            <span><i class="zmdi zmdi-pin"></i> Dhaka Bangladesh</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Event Item -->
-            <div class="col-lg-4 col-md-6 col-12 mb-30">
-                <div class="event-item">
-                    <img src="{% static 'img/event/3.jpg' %}" alt="Image">
-                    <span class="date">30 <span>Apr</span></span>
-                    <div class="content">
-                        <h3><a href="event-details.html">Learn English in ease</a></h3>
-                        <div class="event-meta fix">
-                            <span><i class="zmdi zmdi-time"></i> 4.00 pm - 8.00 pm</span>
-                            <span><i class="zmdi zmdi-pin"></i> Dhaka Bangladesh</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> {% endcomment %}
-<!-- End of Event Area -->
-
-<!-- Testimonial Area Start -->
-{% comment %} <div class="testimonial-area overlay section pt-100 pb-100">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-sm-10 col-12 m-auto">
-                <!-- Testimonial Slider -->
-                <div class="testimonial-slider text-center">
-                    <!-- Single Testimonial -->
-                    <div class="sin-testimonial">
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable orem Ipsum available, but the majority have suffered.</p>
-                        <h4>Steven Hunt</h4>
-                    </div>
-                    <!-- Single Testimonial -->
-                    <div class="sin-testimonial">
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable orem Ipsum available, but the majority have suffered.</p>
-                        <h4>Adam James</h4>
-                    </div>
-                    <!-- Single Testimonial -->
-                    <div class="sin-testimonial">
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable orem Ipsum available, but the majority have suffered.</p>
-                        <h4>Kattie Luis</h4>
-                    </div>
-                </div>   
-            </div>
-        </div>
-    </div>
-</div> {% endcomment %}
-<!-- End of Testimonial Area -->
+{% endif %}
 
 <!-- News Area Start --> 
 <div class="news-area bg-white section pt-120 pb-120">
@@ -217,21 +130,21 @@
         </div>
         <div class="row mb--30">
             <!-- News Item -->
-            {% comment %} {%for news in news%} {% endcomment %}
+            {%for news in news%}
             <div class="col-lg-4 col-md-6 col-12 mb-30">
                 <div class="news-item">
-                    <a href="#" class="image"><img src="{{news.image_news.url}}" alt="Image"></a>
+                    <a href="#" class="image"><img src="{{news.image.url}}" alt="Image"></a>
                     <div class="content">
-                        <h3><a href="#">{{news.name_news}}</a></h3>
+                        <h3><a href="#">{{news.title}}</a></h3>
                         <div class="news-meta fix">
-                            <span><i class="zmdi zmdi-calendar-check"></i>{{news.created_news}}</span>
+                            <span><i class="zmdi zmdi-calendar-check"></i>{{news.created_at}}</span>
                        </div>
-                       <p>{{news.description_news}}</p>
-                       <a href="#">Улантып окуу</a>
+                       <p>{{news.descriptions}}</p>
+                       <a href="{% url 'news_detail' news.id%}">Улантып окуу</a>
                     </div>
                 </div>
             </div>
-            {% comment %} {%endfor%} {% endcomment %}
+            {%endfor%}
         </div>
     </div>
 </div>

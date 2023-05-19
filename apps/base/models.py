@@ -73,7 +73,7 @@ class About(models.Model):
         verbose_name_plural = "Биз жонундо"
         ordering = ('id', )
 
-class News(models.Model):
+class New(models.Model):
     title = models.CharField(
         max_length=255,
         verbose_name="Название"
@@ -89,7 +89,8 @@ class News(models.Model):
         verbose_name="Кошумча маалымат"
     )
     created_at = models.DateTimeField(
-        auto_now_add=True
+        auto_now_add=True,
+        blank=True,null=True
     )
     
     def __str__(self):
