@@ -1,8 +1,8 @@
 from django.urls import path
 
 # my imports
-from .views import 
+from .views import parents
 
 urlpatterns = [
-    path('pride_detail/<int:id>/',pride_detail, name="pride_detail")
+    path('parents',parents, name="parents")
 ]
