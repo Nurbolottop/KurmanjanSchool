@@ -6,4 +6,4 @@ def pride_detail(request,id):
     setting = Settings.objects.latest("id")
     pride = Pride.objects.get(id =id)
     
-    return render(request, "pride_detail.html",locals())
+    return render(request, "detail_pages/pride_detail.html",locals())

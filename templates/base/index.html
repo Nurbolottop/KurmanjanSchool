@@ -139,7 +139,7 @@
                         <div class="news-meta fix">
                             <span><i class="zmdi zmdi-calendar-check"></i>{{news.created_at}}</span>
                        </div>
-                       <p>{{news.descriptions}}</p>
+                       <p>{{news.descriptions|truncatewords:5}}</p>
                        <a href="{% url 'news_detail' news.id%}">Улантып окуу</a>
                     </div>
                 </div>

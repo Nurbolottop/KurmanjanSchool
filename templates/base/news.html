@@ -3,7 +3,7 @@
 {%block content%}
 
 <!-- Header Area Start -->
-{%include 'header.html'%}
+{%include 'include/header.html'%}
 <!-- End of Header Area -->
 <!-- End of Header Area -->
 
@@ -39,13 +39,13 @@
             {%for news in news%}
             <div class="col-lg-4 col-md-6 col-12 mb-30">
                 <div class="news-item">
-                    <a href="{%url 'news_detail' news.id%}" class="image"><img src="{{news.image_news.url}}" alt="Image"></a>
+                    <a href="{%url 'news_detail' news.id%}" class="image"><img src="{{news.image.url}}" alt="Image"></a>
                     <div class="content">
-                        <h3><a href="{%url 'news_detail' news.id%}">{{news.name_news}}</a></h3>
+                        <h3><a href="{%url 'news_detail' news.id%}">{{news.title}}</a></h3>
                         <div class="news-meta fix">
-                           <span><i class="zmdi zmdi-calendar-check"></i>{{news.created_news}}</span>
+                           <span><i class="zmdi zmdi-calendar-check"></i>{{news.created_at}}</span>
                        </div>
-                       <p>{{news.description_news}}</p>
+                       <p>{{news.descriptions|truncatewords:5}}</p>
                        <a href="{%url 'news_detail' news.id%}">Улантып окуу</a>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
 <!-- End of Latest News Area -->
         
 <!-- Footer Bottom Area Start -->
-{%include 'footer.html'%}
+{%include 'include/footer.html'%}
 <!-- End of Footer Bottom Area -->
 
 <!-- jquery -->		

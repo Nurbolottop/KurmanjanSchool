@@ -30,5 +30,6 @@ def news(request):
 
 def news_detail(request,id):
     setting = Settings.objects.latest("id")
+    random_new = New.objects.all().order_by('?')
     news = New.objects.get(id =id)
     return render(request, "detail_pages/news-details.html",locals())

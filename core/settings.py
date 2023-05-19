@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     # apps
     'apps.base',
     'apps.secondary',
+    'apps.documents',
     
 ]
 

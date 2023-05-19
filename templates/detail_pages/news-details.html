@@ -3,7 +3,7 @@
 {%block content%}
 
 <!-- Header Area Start -->
-{%include 'header.html'%}
+{%include 'include/header.html'%}
 <!-- End of Header Area -->
 
 <!-- Page Banner Area Start -->
@@ -12,7 +12,7 @@
         <div class="row">
             <!-- Page Banner -->
             <div class="page-banner text-center col-xs-12">
-                <h1>{{news.name_news}}</h1>
+                <h1>{{news.title}}</h1>
                 <!-- Breadcrumb -->
                 <ul class="breadcrumb">
                     <li><a href="{% url 'index'%}">Башкы бет</a></li>
@@ -31,13 +31,13 @@
             <div class="col-xl-9 col-lg-8 col-12 mb-20">
                 <!-- Single News Details -->
                <div class="single-news-details">
-                    <img class="mb-4" src="{{news.image_news.url}}"  alt="Image">  
+                    <img class="mb-4" src="{{news.image.url}}"  alt="Image">  
                     <div class="content">
-                        <h3 class="title">{{news.name_news}}</h3> 
+                        <h3 class="title">{{news.title}}</h3> 
                         <div class="news-meta fix">
-                           <span><i class="zmdi zmdi-calendar-check"></i>{{news.created_news}}</span>
+                           <span><i class="zmdi zmdi-calendar-check"></i>{{news.created_at}}</span>
                         </div>
-                        <p>{{news.description_news}}</p>
+                        <p>{{news.descriptions}}</p>
                         
                         
                     </div>
@@ -58,9 +58,9 @@
                     <div class="recent-news">
                         <div class="recent-news-item">
 
-                                <a class="image" style="max-length:450px;" style="max-width:350px;" href="{%url 'news_detail' news.id%}"><img style="max-length:450px;" style="max-width:350px;" src="{{news.image_news.url}}" alt="Image"></a>
+                                <a class="image" style="max-length:450px;" style="max-width:350px;" href="{%url 'news_detail' news.id%}"><img style="max-length:450px;" style="max-width:350px;" src="{{news.image.url}}" alt="Image"></a>
                                 <div class="content">
-                                    <h5><a href="{%url 'news_detail' news.id%}">{{news.name_news}}</a></h5>
+                                    <h5><a href="{%url 'news_detail' news.id%}">{{news.title}}</a></h5>
                                 </div>
 
                         </div>
@@ -77,7 +77,7 @@
 </div>
 <!--End of News Area-->
         
-{%include 'footer.html'%}
+{%include 'include/footer.html'%}
 <!-- End of Footer Bottom Area -->
 
 <!-- jquery -->		
