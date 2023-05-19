@@ -160,7 +160,7 @@ dmypy.json
 
 # pytype static type analyzer
 .pytype/
-
+migrations/
 # Cython debug symbols
 cython_debug/
 
