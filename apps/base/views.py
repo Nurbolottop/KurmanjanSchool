@@ -9,6 +9,7 @@ def index(request):
 
 def about(request):
     about = About.objects.latest("id")
+    setting = Settings.objects.latest("id")
     return render(request, "base/about.html",locals())
     
 def contact(request):
