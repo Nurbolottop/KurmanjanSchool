@@ -31,8 +31,8 @@
         <div class="row">
             
 
-            {%for achyksaat in achyksaat%}
-            <div class = 'adi_block'><span style="height: 182px;"><a href="{% url 'achyk_detail' achyksaat.id %}" data-toggle="_modal" data-number="0">{{achyksaat.name}}</a></span></div>
+            {%for public_lessons in lessons %}
+            <div class = 'adi_block'><span style="height: 182px;"><a href="{% url 'public_lessons_detail' public_lessons.id %}" data-toggle="_modal" data-number="0">{{public_lessons.name}}</a></span></div>
             {% endfor %}
         </div>
        

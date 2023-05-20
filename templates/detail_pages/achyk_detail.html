@@ -12,24 +12,17 @@
         <div class="row">
             <!-- Page Banner -->
             <div class="page-banner text-center col-xs-12">
-                <h1 class="section_title">{{achyksaat.name}}</h1>
+                <h1 class="section_title">{{public.title}}</h1>
 
                 <!-- Breadcrumb -->
                 <ul class="breadcrumb">
                     <li><a href="{% url 'index'%}">Башкы бет</a></li>
-                    <li><a href="{%url 'achyk_saat' %}">Артка кайтуу</a></li>
+                    <li><a href="{%url 'public_lessons' %}">Артка кайтуу</a></li>
                 </ul>
             </div>
         </div>
     </div>
 </div>
-<!-- End of Page Banner Area -->
-
-
-            
-
-           
-<!-- News Area Start --> 
 <div class="news-area bg-white section pt-120 pb-120">
     <div class="container">
         <!-- Section Title -->
@@ -37,9 +30,8 @@
             <section class="schedule_page text_page section">
                 <div class="container">
                 <div class="list" data-align-height="span">
-                    {%for achyksaat in achyksaat.achyksaat.all%}
-
-                    <div class = 'adi_block'><span style="height: 182px;"><a href="{{achyksaat.achyksaat.url}}" data-toggle="_modal" data-number="0">{{achyksaat.name}}</a></span></div>
+                    {%for public in lessons.lessons.all %}
+                    <div class = 'adi_block'><span style="height: 182px;"><a href="{{public.file.url}}" data-toggle="_modal" data-number="0">{{public.title}}</a></span></div>
                     {% endfor %}
                     
                 </div>

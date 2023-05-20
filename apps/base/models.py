@@ -1,5 +1,6 @@
 from django.db import models
 from django_resized.forms import ResizedImageField
+
 # Create your models here.
 class Settings(models.Model):
     title = models.CharField(
@@ -99,4 +100,28 @@ class New(models.Model):
     class Meta:
         verbose_name = 'Жанылык'
         verbose_name_plural = 'Жанылыктар'
+        ordering = ('id', )
+
+class Teacher(models.Model):
+    name = models.CharField(
+        max_length=255,
+        verbose_name='Мугалимдин аты.'
+    )
+    image = ResizedImageField(
+        force_format="WEBP", 
+        quality=100, 
+        upload_to='logo/',
+        verbose_name="Мугалимдин суроту",
+        blank = True, null = True
+    )
+    descriptions = models.TextField(
+        verbose_name='Мугалимдин кызматы.'
+    )
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "Мугалим"
+        verbose_name_plural = "Мугалимдер"
         ordering = ('id', )

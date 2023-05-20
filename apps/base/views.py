@@ -1,7 +1,7 @@
 from django.shortcuts import render
 # my imports
 from apps.secondary.models import Slide,Pride,Data,Certificate
-from .models import Settings,About, New 
+from .models import Settings,About, New, Teacher
 # Create your views here.
 
 def index(request):
@@ -33,3 +33,8 @@ def news_detail(request,id):
     random_new = New.objects.all().order_by('?')
     news = New.objects.get(id =id)
     return render(request, "detail_pages/news-details.html",locals())
+
+def teacher(request):
+    setting = Settings.objects.latest("id")
+    teacher = Teacher.objects.all()
+    return render(request, "base/teacher.html",locals())

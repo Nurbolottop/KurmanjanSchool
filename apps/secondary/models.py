@@ -23,7 +23,7 @@ class Slide(models.Model):
 
     class Meta:
         verbose_name = "Слайд"
-        verbose_name_plural = "Слайд"
+        verbose_name_plural = "Слайдтар"
         ordering = ('id', )
         
 class Pride(models.Model):
@@ -46,8 +46,8 @@ class Pride(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = "Сыймыктанабыз!"
-        verbose_name_plural = "Сыймыктанабыз!"
+        verbose_name = "Сыймыктанган окуучубуз!"
+        verbose_name_plural = "Сыймыктанган окуучуларыбыз!"
         ordering = ('id', )  
 
 class Data(models.Model):
@@ -88,4 +88,81 @@ class Certificate(models.Model):
     class Meta:
         verbose_name = 'Сертификат'
         verbose_name_plural = ' Сертификаттар'
+        ordering = ('id', )
+        
+class Gallery(models.Model):
+    name = models.CharField(
+        max_length=255, 
+        verbose_name='Аты'
+    )
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Галерея '
+        verbose_name_plural = 'Галерея'
+        ordering = ('id', )
+
+
+class GalleryDetail(models.Model):
+    gallery = models.ForeignKey(
+        Gallery,
+        on_delete= models.CASCADE,
+        related_name="gallery",
+        verbose_name="Галерея"
+    )
+    image = ResizedImageField(
+        force_format="WEBP", 
+        quality=100, 
+        upload_to='gallery/',
+        verbose_name="Сурот",
+        blank = True, null = True
+        )
+    
+    def __str__(self):
+        return f"{str(self.gallery)}"
+    
+    class Meta:
+        verbose_name = 'Галерея  болумго киргизуу'
+        verbose_name_plural = 'Галерея  болумго киргизуу'
+        ordering = ('id', )
+        
+class Lessons(models.Model):
+    title = models.CharField(
+        max_length=255, 
+        verbose_name='Предметтин аты'
+    )
+    number = models.CharField(
+        max_length=255,
+        verbose_name="Сабак боюнча жетишкендиктер"
+    )
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Сабак'
+        verbose_name_plural = ' Сабактар'
+        ordering = ('id', )
+        
+class Parlament(models.Model):
+    name = models.CharField(
+        max_length=255,
+        verbose_name='Окуучунун  аты.'
+    )
+    image = models.ImageField(
+        upload_to='teacher_image/',
+        verbose_name='Окуучунун суроту'
+    )
+    descriptions = models.TextField(
+        verbose_name='Окуучунун кызматы.'
+    )
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "Манас жаштар уюму"
+        verbose_name_plural = "Манас жаштар уюму"
         ordering = ('id', )
