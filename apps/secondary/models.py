@@ -30,7 +30,7 @@ class Pride(models.Model):
     image = ResizedImageField(
         force_format="WEBP", 
         quality=100, 
-        upload_to='slide/',
+        upload_to='pride/',
         verbose_name="Cурот",
         blank = True, null = True
         )
@@ -80,7 +80,7 @@ class Certificate(models.Model):
     image = ResizedImageField(
         force_format="WEBP", 
         quality=100, 
-        upload_to='slide/',
+        upload_to='certificate/',
         verbose_name="Сурот",
         blank = True, null = True
         )
@@ -151,9 +151,12 @@ class Parlament(models.Model):
         max_length=255,
         verbose_name='Окуучунун  аты.'
     )
-    image = models.ImageField(
-        upload_to='teacher_image/',
-        verbose_name='Окуучунун суроту'
+    image  = ResizedImageField(
+        force_format="WEBP", 
+        quality=100, 
+        upload_to='parlament_image/',
+        verbose_name="Окуучунун суроту",
+        blank = True, null = True
     )
     descriptions = models.TextField(
         verbose_name='Окуучунун кызматы.'
@@ -165,4 +168,24 @@ class Parlament(models.Model):
     class Meta:
         verbose_name = "Манас жаштар уюму"
         verbose_name_plural = "Манас жаштар уюму"
+        ordering = ('id', )
+
+class Student(models.Model):
+    name = models.CharField(
+        max_length=255,
+        verbose_name='Класстын аты.'
+    )
+    image = ResizedImageField(
+        force_format="WEBP", 
+        quality=100, 
+        upload_to='students_image/',
+        verbose_name="Окуучунун суроту",
+        blank = True, null = True
+    )
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = "Класстар"
+        verbose_name = "Класстар"
         ordering = ('id', )

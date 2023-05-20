@@ -82,7 +82,7 @@ class New(models.Model):
     image = ResizedImageField(
         force_format = "WEBP",
         quality = "100",
-        upload_to = "about_image",
+        upload_to = "news_image",
         verbose_name="Сурот",
         blank = True,null = True    
     )
@@ -110,7 +110,7 @@ class Teacher(models.Model):
     image = ResizedImageField(
         force_format="WEBP", 
         quality=100, 
-        upload_to='logo/',
+        upload_to='teacher_image/',
         verbose_name="Мугалимдин суроту",
         blank = True, null = True
     )
