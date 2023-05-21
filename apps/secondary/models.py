@@ -128,24 +128,6 @@ class GalleryDetail(models.Model):
         verbose_name_plural = 'Галерея  болумго киргизуу'
         ordering = ('id', )
         
-class Lessons(models.Model):
-    title = models.CharField(
-        max_length=255, 
-        verbose_name='Предметтин аты'
-    )
-    number = models.CharField(
-        max_length=255,
-        verbose_name="Сабак боюнча жетишкендиктер"
-    )
-
-    def __str__(self):
-        return self.title
-
-    class Meta:
-        verbose_name = 'Сабак'
-        verbose_name_plural = ' Сабактар'
-        ordering = ('id', )
-        
 class Parlament(models.Model):
     name = models.CharField(
         max_length=255,
@@ -186,6 +168,6 @@ class Student(models.Model):
         return self.name
 
     class Meta:
-        verbose_name = "Класстар"
-        verbose_name = "Класстар"
+        verbose_name = "Классты кошуу"
+        verbose_name_plural = "Класстарды кошуу"
         ordering = ('id', )

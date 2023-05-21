@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # my imports
 from apps.base.models import Settings
-from .models import Parents,PublicLesson,LessonsForPublic
+from .models import Parents,LessonsForPublic
 # Create your views here.
 
 def parents(request):

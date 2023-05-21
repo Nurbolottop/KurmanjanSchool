@@ -2,7 +2,7 @@ from django.shortcuts import render
 
 # my imports
 from apps.base.models import Settings
-from .models import Pride,Gallery,Parlament
+from .models import Pride,Gallery,Parlament,Student
 # Create your views here.
 
 def pride_detail(request,id):
@@ -25,3 +25,8 @@ def parlament(request):
     setting = Settings.objects.latest("id")
     parlament = Parlament.objects.all()
     return render(request, "secondary/parlament.html",locals())
+
+def students(request):
+    setting = Settings.objects.latest("id")
+    students = Student.objects.all()
+    return render(request, "secondary/students.html",locals())

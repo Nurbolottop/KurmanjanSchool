@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.contrib.auth.models import User, Group
 
 # my imports
+
 from .models import Settings,About,New,Teacher
 # Register your models here.
 

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 # my imports
 from apps.secondary.models import Slide,Pride,Data,Certificate
-from .models import Settings,About, New, Teacher
+from .models import Settings,About, New, Teacher,Lessons
 # Create your views here.
 
 def index(request):
@@ -17,6 +17,8 @@ def about(request):
     setting = Settings.objects.latest("id")
     about = About.objects.latest("id")
     data = Data.objects.latest("id")
+    lesson = Lessons.objects.all()
+    
     return render(request, "base/about.html",locals())
     
 def contact(request):

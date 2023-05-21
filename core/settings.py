@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'apps.base',
     'apps.secondary',
     'apps.documents',
+    'apps.accreditation',
     
 ]
 

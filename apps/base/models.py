@@ -125,3 +125,21 @@ class Teacher(models.Model):
         verbose_name = "Мугалим"
         verbose_name_plural = "Мугалимдер"
         ordering = ('id', )
+        
+class Lessons(models.Model):
+    title = models.CharField(
+        max_length=255, 
+        verbose_name='Предметтин аты'
+    )
+    number = models.CharField(
+        max_length=255,
+        verbose_name="Сабак боюнча жетишкендиктер"
+    )
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Сабак'
+        verbose_name_plural = ' Сабактар'
+        ordering = ('id', )
