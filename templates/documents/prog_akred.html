@@ -31,7 +31,7 @@
             
 
             {%for accreditation in accreditation%}
-            <div class = 'adi_block'><span style="height: 182px;"><a href="{% url 'prog_detail' accreditation.id %}" data-toggle="_modal" data-number="0">{{accreditation.name}}</a></span></div>
+            <div class = 'adi_block'><span style="height: 182px;"><a href="{% url 'software_detail' accreditation.id %}" data-toggle="_modal" data-number="0">{{accreditation.name}}</a></span></div>
             {% endfor %}
         </div>
        
