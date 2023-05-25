@@ -48,7 +48,7 @@
              {%for pride in pride%} 
             <div class="col-lg-4 col-md-6 col-sm-12 mb-30">
                 <div class="course-item">
-                    <a class="image" href="{% url 'pride_detail' pride.id %}"><img src="{{pride.image.url}}" alt="Image" style="objectFit: cover; width: 100%; height: 350px"></a>
+                    <a class="image" href="{% url 'pride_detail' pride.id %}"><img src="{{pride.image.url}}" alt="Image" style="objectFit: cover; width: 100%; height: 100%"></a>
                     <div class="content">
                         <h4 class="title"><a href="{% url 'pride_detail' pride.id %}" >{{pride.name}}</a></h4>
                         
