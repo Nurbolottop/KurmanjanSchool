@@ -1073,7 +1073,7 @@ ul.sub-menu>li a {
     font-size: 12px;
     font-weight: 300;
     line-height: 32px;
-    text-transform: capitalize;
+    
 }
 
 ul.sub-menu>li:hover a,
@@ -1389,7 +1389,7 @@ a.meanmenu-reveal i {
     font-weight: 500;
     line-height: 30px;
     margin-bottom: 10px;
-    text-transform: capitalize;
+    
 }
 
 .hero-content h1 {
@@ -1398,7 +1398,6 @@ a.meanmenu-reveal i {
     font-weight: 700;
     line-height: 54px;
     margin-bottom: 15px;
-    text-transform: capitalize;
 }
 
 .hero-content p {
@@ -1443,7 +1442,7 @@ a.meanmenu-reveal i {
     font-size: 30px;
     margin-bottom: 20px;
     z-index: 9;
-    text-transform: capitalize;
+    
 }
 
 .about-content p {
@@ -1467,7 +1466,7 @@ a.meanmenu-reveal i {
     font-size: 14px;
     font-weight: 300;
     line-height: 13px;
-    text-transform: capitalize;
+    
 }
 
 .progress {
@@ -1615,7 +1614,7 @@ a.meanmenu-reveal i {
     font-weight: 300;
     line-height: 20px;
     margin-right: 15px;
-    text-transform: capitalize;
+    
 }
 
 .course-item .course-info a i,
@@ -1666,7 +1665,7 @@ a.meanmenu-reveal i {
     font-weight: 300;
     line-height: 20px;
     margin-right: 15px;
-    text-transform: capitalize;
+    
 }
 
 .single-course-details .course-info a i,
@@ -1705,7 +1704,7 @@ a.meanmenu-reveal i {
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
     text-align: center;
-    text-transform: capitalize;
+    
     width: 192px;
 }
 
@@ -1847,7 +1846,7 @@ a.meanmenu-reveal i {
     padding: 10px 15px;
     position: absolute;
     text-align: center;
-    text-transform: capitalize;
+    
     top: 0;
 }
 
@@ -1923,7 +1922,7 @@ a.meanmenu-reveal i {
     padding: 10px 15px;
     position: absolute;
     text-align: center;
-    text-transform: capitalize;
+    
     top: 0;
 }
 
@@ -1957,7 +1956,7 @@ a.meanmenu-reveal i {
     font-weight: 300;
     line-height: 20px;
     margin-right: 15px;
-    text-transform: capitalize;
+    
 }
 
 .single-event-details .event-meta span:last-child {
@@ -2565,7 +2564,7 @@ a.meanmenu-reveal i {
     font-size: 14px;
     line-height: 20px;
     margin-bottom: 5px;
-    text-transform: capitalize;
+    
 }
 
 .single-comment .author-info h4 a {}
@@ -2616,7 +2615,7 @@ a.meanmenu-reveal i {
     font-weight: 300;
     line-height: 16px;
     margin-bottom: 25px;
-    text-transform: capitalize;
+    
 }
 
 /*-- Teacher Sidebar --*/
