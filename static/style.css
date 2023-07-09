@@ -82,19 +82,19 @@ h6 {
 a {
     color: #002147;
     font-family: 'Montserrat', sans-serif;
-    text-decoration: none;
+    
 }
 
 a:hover {
     color: #4c4c4c;
-    text-decoration: none;
+    
 }
 
 a:active,
 a:hover,
 a:focus {
     outline: 0 none;
-    text-decoration: none;
+    
 }
 
 a:focus,
@@ -2906,6 +2906,6 @@ a.meanmenu-reveal i {
 }
 .adi_block span a:hover{
     transition: .1s;
-    text-decoration: none;
+    
     color: #2CA31D;
 }

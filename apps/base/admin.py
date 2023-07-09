@@ -3,7 +3,7 @@ from django.contrib.auth.models import User, Group
 
 # my imports
 
-from .models import Settings,About,New,Teacher
+from .models import Settings,About,New,Teacher,Contact
 # Register your models here.
 
 class SettingsFilterAdmin(admin.ModelAdmin):
@@ -25,6 +25,11 @@ class TeacherFilterAdmin(admin.ModelAdmin):
     list_filter = ('name', )
     list_display = ('name', )
     search_fields = ('name', )
+
+class СontactFilterAdmin(admin.ModelAdmin):
+    list_filter = ('name', 'email', 'message')
+    list_display = ('name', 'email', 'message')
+    search_fields = ('name', 'email', 'message')
     
 # Deleting Models <<User>> and <<Group>>
 admin.site.unregister(User)
@@ -33,4 +38,6 @@ admin.site.register(Settings, SettingsFilterAdmin)
 admin.site.register(About, AboutFilterAdmin)
 admin.site.register(New, NewFilterAdmin)
 admin.site.register(Teacher, TeacherFilterAdmin)
+admin.site.register(Contact, СontactFilterAdmin)
+
 

@@ -125,13 +125,17 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = os.environ.get("LANGUAGE_CODE")
 
-TIME_ZONE = os.environ.get("TIME_ZONEE")
+TIME_ZONE = os.environ.get("TIME_ZONE")
 
 USE_I18N = os.environ.get("USE_I18NN")
 
 USE_TZ = os.environ.get("USE_TZZ")
 
-
+EMAIL_USE_TLS = os.environ.get('EMAIL_USE_TLS')
+EMAIL_HOST = os.environ.get('EMAIL_HOST')
+EMAIL_PORT = os.environ.get('EMAIL_PORT')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
