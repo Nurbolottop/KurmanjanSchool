@@ -125,11 +125,11 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = os.environ.get("LANGUAGE_CODE")
 
-TIME_ZONE = os.environ.get("TIME_ZONE")
+TIME_ZONE = os.environ.get("TIME_ZONEE")
 
 USE_I18N = os.environ.get("USE_I18NN")
 
-USE_TZ = os.environ.get("USE_TZZ")
+USE_TZ = os.environ.get("USE_TZ")
 
 EMAIL_USE_TLS = True 
 EMAIL_HOST = 'smtp.gmail.com' 
