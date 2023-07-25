@@ -31,11 +31,9 @@ def contact(request):
         Contact.objects.create(name = name,email = email,message = message)
         send_mail(
             f'{message}',
-
-            f'Саламатсызбы {name}, билдируу калтырганыныз учун рахмат , Биз жакын арада байланышка чыгабыз.Сиздин билдируунуз: {message} Сиздин почтаныз: {email}',
+            f'Саламатсызбы {name}, билдируу калтырганыныз учун рахмат, Биз жакын арада байланышка чыгабыз.Сиздин билдируунуз: {message} Сиздин почтаныз: {email}',
             "noreply@somehost.local",
             [email])
-        
         return redirect('index')
     return render(request, "base/contact.html",locals())
 
