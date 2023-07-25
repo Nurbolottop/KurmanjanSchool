@@ -25,7 +25,7 @@ load_dotenv('.env')
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG")
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -123,13 +123,13 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
-LANGUAGE_CODE = os.environ.get("LANGUAGE_CODE")
+LANGUAGE_CODE = 'ky'
 
-TIME_ZONE = os.environ.get("TIME_ZONEE")
+TIME_ZONE = 'Asia/Bishkek'
 
-USE_I18N = os.environ.get("USE_I18NN")
+USE_I18N = True
 
-USE_TZ = os.environ.get("USE_TZ")
+USE_TZ = True
 
 EMAIL_USE_TLS = True 
 EMAIL_HOST = 'smtp.gmail.com' 
