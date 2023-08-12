@@ -32,7 +32,7 @@
                                 <li ><a href="{% url 'index'%}">Башкы бет</a></li>
                                 
                                 <li><a href="{% url 'teacher' %}">Мугалимдер</a>
-                                <li><a href="{% url 'students' %}">Окуучулар/Класстар</a>
+                                {% comment %} <li><a href="{% url 'students' %}">Окуучулар/Класстар</a> {% endcomment %}
                                     <ul class="sub-menu">
                                         <!-- <li><a href="{% url 'parlament' %}">Манас жаштар уюму</a></li> -->
 
@@ -48,7 +48,7 @@
                                 </li>
                                 <li><a href="#">Кошумча</a>
                                     <ul class="sub-menu">
-                                        <li><a href="{% url 'public_lessons' %}">Ачык сааттар </a></li>
+                                        {% comment %} <li><a href="{% url 'public_lessons' %}">Ачык сааттар </a></li> {% endcomment %}
 
                                         <li><a href="{% url 'about' %}">Биз жонундо </a></li>
                                         <li><a href="{% url 'contact' %}">Байланыш</a></li>

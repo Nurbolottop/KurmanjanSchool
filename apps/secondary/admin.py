@@ -19,10 +19,10 @@ class LessonsFilterAdmin(admin.ModelAdmin):
 #     list_display = ('name', )
 #     search_fields = ('name', )
     
-class StudentFilterAdmin(admin.ModelAdmin):
-    list_filter = ('name', )
-    list_display = ('name', )
-    search_fields = ('name', )
+# class StudentFilterAdmin(admin.ModelAdmin):
+#     list_filter = ('name', )
+#     list_display = ('name', )
+#     search_fields = ('name', )
     
 admin.site.register(Pride,PrideFilterAdmin)
 admin.site.register(Slide)
@@ -32,7 +32,7 @@ admin.site.register(Gallery)
 admin.site.register(GalleryDetail)
 admin.site.register(Lessons,LessonsFilterAdmin)
 # admin.site.register(Parlament,ParlamentFilterAdmin)
-admin.site.register(Student,StudentFilterAdmin)
+# admin.site.register(Student,StudentFilterAdmin)
 
 
 
