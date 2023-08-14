@@ -2369,6 +2369,7 @@ a.meanmenu-reveal i {
     line-height: 25px;
     color: #ffffff;
     font-weight: 300;
+    text-decoration: none;
 }
 
 .footer-widget ul li a:hover {
