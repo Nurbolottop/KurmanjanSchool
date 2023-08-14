@@ -1024,10 +1024,13 @@ textarea:focus {
     margin-left: 6px;
     position: relative;
     top: -1px;
+    text-decoration: none;
+
 }
 
 .main-menu nav>ul>li.active>a,
 .main-menu nav>ul>li:hover>a {
+ 
     color: #fdc800;
 }
 
@@ -1035,11 +1038,13 @@ textarea:focus {
 .main-menu nav>ul>li:hover>a:before {
     left: 0;
     right: 0;
+
 }
 
 /*-- Sub Menu --*/
 ul.sub-menu {
     background-color: #ffffff;
+    text-decoration: none;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
     left: -20px;
     margin: 0;
@@ -1061,6 +1066,7 @@ ul.sub-menu {
     margin-top: 0;
     visibility: visible;
     z-index: 999;
+    text-decoration: none;
 }
 
 ul.sub-menu>li {
@@ -1068,6 +1074,7 @@ ul.sub-menu>li {
     margin: 0;
     padding: 0;
     position: relative;
+    text-decoration: none;
 }
 
 ul.sub-menu>li a {
@@ -1075,7 +1082,7 @@ ul.sub-menu>li a {
     font-size: 12px;
     font-weight: 300;
     line-height: 32px;
-    
+    text-decoration: none;
 }
 
 ul.sub-menu>li:hover a,
