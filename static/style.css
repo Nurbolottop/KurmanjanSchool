@@ -1002,6 +1002,8 @@ textarea:focus {
     text-transform: uppercase;
     padding: 40px 0;
     position: relative;
+    text-decoration: none;
+
 }
 
 .stick .main-menu nav>ul>li>a {
