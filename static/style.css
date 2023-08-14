@@ -769,6 +769,7 @@ textarea:focus {
     font-size: 12px;
     line-height: 12px;
     text-transform: uppercase;
+    text-decoration: none;
 }
 
 .breadcrumb a:hover {
