@@ -51,25 +51,54 @@ class Pride(models.Model):
         ordering = ('id', )  
 
 class Data(models.Model):
-    years_school = models.CharField(
-        max_length=255,
-        verbose_name='Мугалимдердин саны'
-    )
     child_school = models.CharField(
         max_length=255,
-        verbose_name="Окуучулардын саны"
+        verbose_name="Окуучулардын саны",
+        blank=True,null=True,
     )
-    graduate_school = models.CharField(
+    class_comp = models.CharField(
         max_length=255,
-        verbose_name='БҮТҮРҮҮЧҮЛӨР(ЖЫЛЫНА)'
+        verbose_name="Класс комплекси",
+        blank=True,null=True,
     )
-    book_school = models.CharField(
+    nol_class = models.CharField(
         max_length=255,
-        verbose_name='КИТЕПТЕРДИН САНЫ'
+        blank=True,null=True,
+        verbose_name="Башталгыч класс"
     )
-
+    language = models.CharField(
+        max_length=255,
+        blank=True,null=True,
+        verbose_name="Окутуу тили"
+    )
+    teacher_num = models.CharField(
+        max_length=255,
+        blank=True,null=True,
+        verbose_name='Мугалимдердин саны'
+    )
+    great_teacher = models.CharField(
+        max_length=255,
+        blank=True,null=True,
+        verbose_name='Жогорку билимдуу'
+    )
+    good_teacher = models.CharField(
+        max_length=255,
+        blank=True,null=True,
+        verbose_name='Атайын орто билимдуу'
+    )
+    magister_teacher = models.CharField(
+        max_length=255,
+        blank=True,null=True,
+        verbose_name="Магистр дипломуна ээ"
+    )
+    very_good_teacher = models.CharField(
+        max_length=255,
+        blank=True,null=True,
+        verbose_name="Билим беруунун мыктысы"
+    )
+    
     def __str__(self):
-        return self.years_school
+        return self.child_school
 
     class Meta:
         verbose_name = 'Биз сандабыз!'
