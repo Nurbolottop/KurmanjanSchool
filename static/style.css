@@ -481,7 +481,15 @@ textarea:focus {
 .pt-75 {
     padding-top: 75px;
 }
-
+.text-centerr{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+.hhhhh{
+    font-size: 38px !important;
+}
 .pt-80 {
     padding-top: 80px;
 }
@@ -1747,6 +1755,9 @@ a.meanmenu-reveal i {
     font-size: 62px;
     margin-bottom: 30px;
     line-height: 46px;
+}
+.single-funfact .hhhhh{
+font-size: 38px !important;
 }
 
 .single-funfact h4 {
