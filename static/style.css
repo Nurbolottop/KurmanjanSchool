@@ -732,7 +732,9 @@ textarea:focus {
 }
 
 /*-- Page Banner --*/
-.page-banner {}
+.page-banner {
+margin-top: 50px;
+}
 
 .page-banner h1 {
     color: #ffffff;
@@ -1475,6 +1477,7 @@ a.meanmenu-reveal i {
 
 .about-image img {
     width: 100%;
+    margin-top: 40px;
 }
 
 /*-- 4.2 Skill Area --*/
@@ -2930,4 +2933,59 @@ font-size: 38px !important;
     transition: .1s;
     
     color: #2CA31D;
+}
+
+
+.section_way {
+    width: 1160px;
+    height: 700px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    margin: auto;
+    /* padding: 40px; */
+    /* margin-bottom: 700px;
+    margin-top: 500px; */
+}
+.section_way_wrap{
+    margin: 40px;
+}
+.way_title{
+    font-size: 35px;
+    font-weight: 700;
+}
+.way_more {
+    width: 100px;
+    height: 40px;
+    border-radius: 35px;
+    background: blue;
+    border: none;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.way_line {
+    height: 2px;
+    width: 100%;
+    background: #000;
+    margin-bottom: 50px;
+}
+
+.way_paths {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.way_block_item {
+    width: 60px;
+    height: 60px;
+    background: blue;
+    margin: 20px 0 20px 0;
+}
+
+.way_block_title {
+    font-size: 40px;
+}
+.way_block_text{
+    color: gray;
 }
