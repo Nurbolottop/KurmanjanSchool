@@ -2952,16 +2952,21 @@ font-size: 38px !important;
 }
 
 .way_more_button {
-    width: 120px;
-    height: 40px;
-    border-radius: 35px;
+    width: auto;
+    height: auto;
+    padding: 10px 20px; /* Измените значения, если нужно */
+    border-radius: 10px; /* Измените значение, если нужно */
     background: rgb(22, 22, 143);
     border: none;
     color: white;
     font-weight: 700;
     margin-top: 20px;
     cursor: pointer;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
+
 
 .way_line {
     height: 2px;
