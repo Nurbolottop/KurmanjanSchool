@@ -41,6 +41,24 @@
     </div>
 </div>
 <!-- End of About Area -->
+<section class="section_way">
+    <button class="way_more_button">{{setting.title}}</button>
+    <h1 class="way_title">Мектеп тарыхы</h1>
+    <div class="way_line"></div>
+    <div class="way_paths">
+        {% for history in history%}
+        <div class="way_block">
+            <h1 class="way_block_title">{{history.year}}</h1>
+            <div class="way_block_item"></div>
+            <div class="way_block_text">{{history.descriptions}}</div>
+        </div>
+        {% endfor %}
+        <!-- Добавьте больше блоков, как этот, по мере необходимости -->
+    </div>
+</section>
+
+
+
 <!-- Funfact Area Start -->
 <div class="funfact-area section pt-100 pb-50">
     <div class="container">
@@ -168,154 +186,6 @@
         </div>
     </div>
 </div>
-<!-- End of Testimonial Area -->
-        
-<!-- Teachers Area Start -->
-{% comment %} <div class="teachers-area section bg-white pt-120 pb-100">
-    <div class="container">
-        <!-- Section Title -->
-        <div class="row">
-            <div class="section-title col-xs-12 mb-60">
-                <h3>our TEACHERS</h3>
-                <p>There are many variations of passages</p>
-            </div>
-        </div>
-        <div class="row">
-            <!-- Teacher Slider -->
-            <div class="teacher-slider">
-                <!-- Single Teacher -->
-                <div class="col-xs-12">
-                    <div class="single-teacher text-center">
-                        <img src="img/teacher/1.jpg" alt="Image">
-                        <div class="content">
-                            <h4>Julie Jimenez</h4>
-                            <h5>Teacher</h5>
-                            <div class="social-links">
-                                <a href="www.facebook.com"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                                <a href="www.instagram.com"><i class="fa fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Teacher -->
-                <div class="col-xs-12">
-                    <div class="single-teacher text-center">
-                        <img src="img/teacher/2.jpg" alt="Image">
-                        <div class="content">
-                            <h4>Ronald Wilson</h4>
-                            <h5>Teacher</h5>
-                            <div class="social-links">
-                                <a href="www.facebook.com"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                                <a href="www.instagram.com"><i class="fa fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Teacher -->
-                <div class="col-xs-12">
-                    <div class="single-teacher text-center">
-                        <img src="img/teacher/3.jpg" alt="Image">
-                        <div class="content">
-                            <h4>Sarah Burke</h4>
-                            <h5>Teacher</h5>
-                            <div class="social-links">
-                                <a href="www.facebook.com"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                                <a href="www.instagram.com"><i class="fa fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Teacher -->
-                <div class="col-xs-12">
-                    <div class="single-teacher text-center">
-                        <img src="img/teacher/4.jpg" alt="Image">
-                        <div class="content">
-                            <h4>Tiffany Bryant</h4>
-                            <h5>Teacher</h5>
-                            <div class="social-links">
-                                <a href="www.facebook.com"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                                <a href="www.instagram.com"><i class="fa fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Teacher -->
-                <div class="col-xs-12">
-                    <div class="single-teacher text-center">
-                        <img src="img/teacher/1.jpg" alt="Image">
-                        <div class="content">
-                            <h4>Julie Jimenez</h4>
-                            <h5>Teacher</h5>
-                            <div class="social-links">
-                                <a href="www.facebook.com"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                                <a href="www.instagram.com"><i class="fa fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Teacher -->
-                <div class="col-xs-12">
-                    <div class="single-teacher text-center">
-                        <img src="img/teacher/2.jpg" alt="Image">
-                        <div class="content">
-                            <h4>Ronald Wilson</h4>
-                            <h5>Teacher</h5>
-                            <div class="social-links">
-                                <a href="www.facebook.com"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                                <a href="www.instagram.com"><i class="fa fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Teacher -->
-                <div class="col-xs-12">
-                    <div class="single-teacher text-center">
-                        <img src="img/teacher/3.jpg" alt="Image">
-                        <div class="content">
-                            <h4>Sarah Burke</h4>
-                            <h5>Teacher</h5>
-                            <div class="social-links">
-                                <a href="www.facebook.com"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                                <a href="www.instagram.com"><i class="fa fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Teacher -->
-                <div class="col-xs-12">
-                    <div class="single-teacher text-center">
-                        <img src="img/teacher/4.jpg" alt="Image">
-                        <div class="content">
-                            <h4>Tiffany Bryant</h4>
-                            <h5>Teacher</h5>
-                            <div class="social-links">
-                                <a href="www.facebook.com"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                                <a href="www.instagram.com"><i class="fa fa-instagram"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> {% endcomment %}
-<!-- End of Teachers Area -->
         
 <!-- Footer Top Area Start -->
 {% include 'include/footer.html'%}

@@ -101,7 +101,22 @@ class New(models.Model):
         verbose_name = 'Жанылык'
         verbose_name_plural = 'Жанылыктар'
         ordering = ('id', )
-
+class History(models.Model):
+    year = models.CharField(
+        max_length=255,
+        verbose_name="Жылы"
+    )
+    descriptions = models.TextField(
+        verbose_name="Маалымат"
+    )
+    
+    def __str__(self):
+        return self.year 
+    
+    class Meta:
+        verbose_name = "Мектеп тарыхы"
+        verbose_name_plural = "Мектеп тарыхы"
+        
 class Teacher(models.Model):
     name = models.CharField(
         max_length=255,

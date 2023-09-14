@@ -2,7 +2,7 @@ from django.shortcuts import render,redirect
 from django.core.mail import send_mail
 # my imports
 from apps.secondary.models import Slide,Pride,Data,Certificate
-from .models import Settings,About, New, Teacher,Lessons,Contact
+from .models import Settings,About, New, Teacher,Lessons,Contact,History
 # Create your views here.
 
 def index(request):
@@ -19,7 +19,7 @@ def about(request):
     about = About.objects.latest("id")
     data = Data.objects.latest("id")
     lesson = Lessons.objects.all()
-    
+    history= History.objects.all()
     return render(request, "base/about.html",locals())
     
 def contact(request):

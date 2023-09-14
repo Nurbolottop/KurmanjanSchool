@@ -2931,3 +2931,113 @@ font-size: 38px !important;
     
     color: #2CA31D;
 }
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.section_way {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.way_title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.way_more_button {
+    width: 120px;
+    height: 40px;
+    border-radius: 35px;
+    background: rgb(22, 22, 143);
+    border: none;
+    color: white;
+    font-weight: 700;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.way_line {
+    height: 2px;
+    width: 100%;
+    background: #000;
+    margin: 20px 0;
+}
+
+.way_paths {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    justify-items: center;
+}
+
+.way_block {
+    text-align: center;
+}
+
+.way_block_title {
+    font-size: 24px;
+    font-family: 'Playfair Display', serif; /* Новый шрифт для заголовка */
+    font-weight: bold; /* Жирный текст */
+    margin-top: 10px;
+}
+
+
+.way_block_item {
+    width: 100px;
+    height: 100px;
+    background-color: #002147; /* Темно-синий цвет */
+    border-radius: 50%; /* Делаем квадрат круглым */
+    margin: 0 auto; /* Центрируем по горизонтали */
+    display: flex;
+    justify-content: center; /* Центрируем содержимое по горизонтали */
+    align-items: center; /* Центрируем содержимое по вертикали */
+    opacity: 0.7; /* Прозрачность: 0.7 (от 0 до 1, где 0 - полностью прозрачный, 1 - непрозрачный) */
+    background-image: url('./img/bg/pngwing.com.png'); /* Путь к вашей иконке */
+    background-size: contain; /* Масштабируем изображение так, чтобы оно вмещалось в блок */
+    background-repeat: no-repeat; /* Запрещаем повторение фона */
+    background-position: center; /* Центрируем изображение */
+}
+
+
+.way_block_text {
+    color: #000; /* Черный цвет текста */
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif; /* Новый шрифт для текста */
+    font-weight: bold; /* Жирный текст */
+}
+
+@media (min-width: 768px) {
+    .section_way {
+        max-width: 1160px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px;
+    }
+
+    .way_title {
+        font-size: 35px;
+        margin-top: 20px;
+    }
+
+    .way_more_button {
+        width: 100px;
+        height: 40px;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    .way_line {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
