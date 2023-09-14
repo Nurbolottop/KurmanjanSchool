@@ -2952,10 +2952,10 @@ font-size: 38px !important;
 }
 
 .way_more_button {
-    width: auto;
-    height: auto;
-    padding: 10px 20px; /* Измените значения, если нужно */
-    border-radius: 10px; /* Измените значение, если нужно */
+    width: 180px; /* Изменили ширину */
+    height: 60px; /* Изменили высоту */
+    padding: 10px 20px;
+    border-radius: 10px;
     background: rgb(22, 22, 143);
     border: none;
     color: white;
@@ -2963,8 +2963,7 @@ font-size: 38px !important;
     margin-top: 20px;
     cursor: pointer;
     white-space: normal;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    overflow: visible;
 }
 
 
@@ -3019,6 +3018,7 @@ font-size: 38px !important;
     font-weight: bold; /* Жирный текст */
 }
 
+/* Медиазапрос для экранов шириной не менее 768px */
 @media (min-width: 768px) {
     .section_way {
         max-width: 1160px;
@@ -3035,11 +3035,20 @@ font-size: 38px !important;
     }
 
     .way_more_button {
-        width: 100px;
-        height: 40px;
-        font-size: 16px;
+        width: 180px; /* Изменили ширину */
+        height: 60px; /* Изменили высоту */
+        padding: 10px 20px;
+        border-radius: 10px;
+        background: rgb(22, 22, 143);
+        border: none;
+        color: white;
+        font-weight: 700;
         margin-top: 20px;
+        cursor: pointer;
+        white-space: normal;
+        overflow: visible;
     }
+    
 
     .way_line {
         margin-top: 20px;
