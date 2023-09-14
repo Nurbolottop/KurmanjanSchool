@@ -3019,6 +3019,9 @@ font-size: 38px !important;
 }
 
 /* Медиазапрос для экранов шириной не менее 768px */
+/* ... (ваш код выше) ... */
+
+/* Медиазапрос для экранов шириной не менее 768px */
 @media (min-width: 768px) {
     .section_way {
         max-width: 1160px;
@@ -3048,10 +3051,19 @@ font-size: 38px !important;
         white-space: normal;
         overflow: visible;
     }
-    
 
     .way_line {
         margin-top: 20px;
         margin-bottom: 20px;
     }
+
+    .way_paths {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Три столбца */
+        gap: 20px;
+        margin-top: 20px;
+        justify-items: center;
+    }
+    
+    /* ... (ваш код ниже) ... */
 }
